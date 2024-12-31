@@ -5,5 +5,4 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set relativenumber")
 
 require("config.lazy")
-
-vim.keymap.set("n", "<leader>la", ":Lazy<CR>", {})
+require("config.keymaps")
