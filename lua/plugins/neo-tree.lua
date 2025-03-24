@@ -31,7 +31,7 @@ return {
           indent_marker = '│',
           last_indent_marker = '└',
           highlight = 'NeoTreeIndentMarker',
-          with_expanders = nil, 
+          with_expanders = nil,
           expander_collapsed = '',
           expander_expanded = '',
           expander_highlight = 'NeoTreeExpander',
@@ -40,7 +40,7 @@ return {
           folder_closed = '',
           folder_open = '',
           folder_empty = '󰜌',
-          provider = function(icon, node, state) 
+          provider = function(icon, node)
             if node.type == 'file' or node.type == 'terminal' then
               local success, web_devicons = pcall(require, 'nvim-web-devicons')
               local name = node.type == 'terminal' and 'terminal' or node.name
@@ -60,7 +60,7 @@ return {
         },
         git_status = {
           symbols = {
-            added = '', 
+            added = '',
             modified = '',
             deleted = '✖',
             renamed = '󰁕',
@@ -74,5 +74,6 @@ return {
       },
     })
     vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>')
+    vim.api.nvim_set_keymap('n', '<leader>b', '<Cmd>wincmd l<CR>', { noremap = true, silent = true })
   end,
 }

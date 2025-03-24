@@ -5,7 +5,7 @@ return {
     name = 'catppuccin',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme('catppuccin-mocha')
+       vim.cmd.colorscheme('catppuccin-mocha')
     end,
   },
   {
@@ -13,5 +13,13 @@ return {
     config = function()
      -- vim.cmd.colorscheme('dracula')
     end
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+     -- vim.cmd.colorscheme "tokyonight-night"
+    end,
   },
 }
