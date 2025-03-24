@@ -25,6 +25,7 @@ require("lazy").setup({
     { import = "plugins/lsp" },
     { import = "plugins/dashboard" },
     { import = "plugins/git" },
+    { import = "plugins/tabs" },
   },
   install = { colorscheme = { "dracula" } },
   checker = { enabled = true },
